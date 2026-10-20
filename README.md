@@ -54,3 +54,10 @@ The progress callback fires once per read chunk — for 64 KiB chunks on a 1 GiB
 ```
 node --test
 ```
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
