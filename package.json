@@ -1,6 +1,6 @@
 {
   "name": "tiny-batch-file-copier",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Concurrent file copying with configurable concurrency and progress tracking",
   "type": "module",
   "main": "src/index.js",
